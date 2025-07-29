@@ -143,31 +143,60 @@ const noOfDay = 2;
 //   console.log("Invalid day");
 // }
 
-switch (noOfDay) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:
-    console.log("Tuesday");
-    break;
-  case 3:
-    console.log("Wednesday");
-    break;
-  case 4:
-    console.log("Thursday");
-    break;
-  case 5:
-    console.log("Friday");
-    break;
-  case 6:
-    console.log("Saturday");
-    break;
-  case 7:
-    console.log("Sunday");
-    break;
-  default:
-    console.log("Invalid day");
-    break;
-}
+// switch (noOfDay) {
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Thursday");
+//     break;
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   case 7:
+//     console.log("Sunday");
+//     break;
+//   default:
+//     console.log("Invalid day");
+//     break;
+// }
 
-// Ternary operator
+// Nested If statement
+`
+if (condition){
+ if (condition){
+        // code to execute if condition is true
+    }else{
+        // code to execute if condition is false
+  }      
+    
+}else{
+  //code to execute if outer condition is false
+  }
+ `;
+
+// University Admission
+const gpa = Number(prompt("Enter your gpa: "));
+const satScore = prompt("Enter your SAT score: ");
+
+if (gpa > 3.8 && satScore > 1300) {
+  alert("Congratulations! You have been admitted to the university.");
+} else if (gpa >= 3.5 && gpa <= 3.8) {
+  const has_recommendationLetter = prompt("Do you have your recommendation letter? True or False").toLowerCase();
+  if (satScore > 1200 || has_recommendationLetter == "true") {
+    alert("Congratulations! You have been admitted to the university.");
+  } else if (satScore >= 1150 && satScore <= 1200) {
+    alert("You will get a special review from the university");
+  }
+} else {
+  alert("you are rejected");
+}
